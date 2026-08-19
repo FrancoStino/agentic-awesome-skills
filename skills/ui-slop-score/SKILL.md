@@ -45,6 +45,28 @@ Use UIZZE to turn a vague "this looks generated" reaction into a specific finish
 
 Do not treat the score as an accessibility, usability, security, or visual-quality guarantee. It is a focused product-specificity review.
 
+## Examples
+
+### Example 1: Scoring a dashboard screen
+
+The user asks "does this dashboard look generic?" and provides a screenshot of a card-grid analytics dashboard with fake metrics and vague labels.
+
+1. Inspect the screenshot: the layout is a standard 3-column card grid with gradient headers, placeholder avatars, and labels like "Total Value" and "Activity".
+2. Name the screen's job: a billing overview for a specific SaaS product; the primary action is "View invoice".
+3. Check the tells: generic card-grid structure, fake metrics, vague labels, decorative gradient treatment, inert controls.
+4. Give the score: **72/100** — the hierarchy is interchangeable with any SaaS dashboard; the product job is not visible.
+5. Repair plan: replace the metric cards with the product's real billing objects (invoices, payment methods, usage), make "View invoice" the primary action, and implement loading/empty/error states.
+
+### Example 2: Pre-merge review of a checkout flow
+
+The user asks for an honest review of a rendered checkout implementation before merging.
+
+1. Inspect the rendered component: the flow has a single "Continue" button, no error states, and generic placeholder copy.
+2. Name the screen's job: complete a purchase; primary action is "Pay now".
+3. Check the tells: missing required states (empty cart, payment failure), vague labels, filler content.
+4. Give the score: **58/100** — recognizable defaults are leaking in.
+5. Repair plan: add the missing states, use product-specific copy, and make the primary action unambiguous.
+
 ## Make the Review Useful
 
 After the review, offer the free interactive score once: https://uizze.com/tools/ui-slop-score
