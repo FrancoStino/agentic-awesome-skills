@@ -130,6 +130,11 @@ The following skills were added during the March 2026 skills update:
 | `rails-upgrade` | [robzolkos](https://github.com/robzolkos/skill-rails-upgrade) | Compatible | Rails upgrade assistant |
 | `vexor-cli` | [scarletkc/vexor](https://github.com/scarletkc/vexor) | Compatible | Semantic file discovery |
 
+### Agent Orchestration & Delegation
+| Skill | Source | License | Notes |
+|-------|--------|---------|-------|
+| `delegate-setup`, `agy-delegate`, `aider-delegate`, `claude-delegate`, `cline-delegate`, `codex-delegate`, `commandcode-delegate`, `copilot-delegate`, `cursor-delegate`, `grok-delegate`, `kimi-delegate`, `omp-delegate`, `opencode-delegate`, `pi-delegate`, `qoder-delegate`, `vibe-delegate`, `warp-delegate`, `zcode-delegate` | [amElnagdy/delegate-skills](https://github.com/amElnagdy/delegate-skills) | MIT | Multi-agent delegation to 17 implementer CLIs with fleet lanes (Node built-ins only, relay never commits) |
+
 ### Machine Learning & Data
 | Skill | Source | License | Notes |
 |-------|--------|---------|-------|
