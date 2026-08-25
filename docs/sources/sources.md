@@ -158,6 +158,7 @@ The following skills were added during the March 2026 skills update:
 | Skill | Source | License | Notes |
 |-------|--------|---------|-------|
 | `clarity-gate` | [frmoretto/clarity-gate](https://github.com/frmoretto/clarity-gate) | Compatible | RAG quality verification |
+| `debate-review`, `babysit-pr` | [amElnagdy/review-skills](https://github.com/amElnagdy/review-skills) | MIT | Two-model debate review + automated PR babysitting for GitHub/GitLab (requires delegate-skills) |
 
 **Total: 80+ new skills added**
 
