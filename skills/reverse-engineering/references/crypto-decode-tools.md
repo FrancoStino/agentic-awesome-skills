@@ -125,7 +125,7 @@ xortool-xor -f encrypted -s "known_plaintext"
 
 | 编码 | 识别特征 | 解码方式 |
 |------|---------|---------|
-| Base64 | 末尾 `=` 或 `==`，字符集 A-Za-z0-9+/ | `base64 -d` / CyberChef |
+| Base64 | 末尾 `=` 或 `==`，字符集 A-Za-z0-9+/ | `base64 -d` / CyberChef | <!-- security-allowlist: SEC008 -->
 | Base32 | 大写字母 + 2-7，末尾 `=` | CyberChef |
 | Base58 | 无 0/O/I/l，常见于短标识符编码 | CyberChef |
 | Hex | 只有 0-9a-f，长度为偶数 | `xxd -r -p` / CyberChef |
