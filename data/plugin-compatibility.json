@@ -2424,6 +2424,25 @@
       "runtime_files": []
     },
     {
+      "id": "api-rate-limit-handler",
+      "path": "skills/api-rate-limit-handler",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "api-sdk-generator",
       "path": "skills/api-sdk-generator",
       "targets": {
@@ -27081,6 +27100,25 @@
       "runtime_files": []
     },
     {
+      "id": "poka-yoke",
+      "path": "skills/poka-yoke",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "polars",
       "path": "skills/polars",
       "targets": {
@@ -32793,6 +32831,25 @@
     {
       "id": "spec-driven-development",
       "path": "skills/spec-driven-development",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "spec-driven-loop",
+      "path": "skills/spec-driven-loop",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -38945,10 +39002,10 @@
     }
   ],
   "summary": {
-    "total_skills": 2026,
+    "total_skills": 2029,
     "supported": {
-      "codex": 1948,
-      "claude": 1969
+      "codex": 1951,
+      "claude": 1972
     },
     "blocked": {
       "codex": 78,

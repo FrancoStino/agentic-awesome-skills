@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-24T05:22:46.000Z",
-  "total": 2026,
+  "generatedAt": "2026-08-25T17:54:41.000Z",
+  "total": 2029,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -3668,6 +3668,41 @@
         "versioning"
       ],
       "path": "skills/api-patterns/SKILL.md"
+    },
+    {
+      "id": "api-rate-limit-handler",
+      "canonical_id": "api-rate-limit-handler",
+      "name": "api-rate-limit-handler",
+      "description": "Implement bounded, idempotency-aware API throttling, backoff, and retry handling for 429 and transient 5xx responses.",
+      "category": "development",
+      "risk": "safe",
+      "source": "self",
+      "source_type": "self",
+      "license": "MIT",
+      "tags": [
+        "rate-limiting",
+        "retry",
+        "backoff",
+        "api",
+        "resilience",
+        "throttle",
+        "429"
+      ],
+      "triggers": [
+        "rate-limiting",
+        "retry",
+        "backoff",
+        "api",
+        "resilience",
+        "throttle",
+        "429",
+        "rate",
+        "limit",
+        "handler",
+        "bounded",
+        "idempotency"
+      ],
+      "path": "skills/api-rate-limit-handler/SKILL.md"
     },
     {
       "id": "api-sdk-generator",
@@ -33305,7 +33340,7 @@
       "source_type": "community",
       "source_repo": "TheaDust/lore",
       "license": "MIT",
-      "license_source": "https://github.com/TheaDust/lore/blob/main/LICENSE",
+      "license_source": "https://github.com/TheaDust/lore/blob/25111dead1b54053d65124e43c35d307951c1844/LICENSE",
       "tags": [
         "memory",
         "knowledge-base",
@@ -41021,6 +41056,41 @@
         "api"
       ],
       "path": "skills/podcast-generation/SKILL.md"
+    },
+    {
+      "id": "poka-yoke",
+      "canonical_id": "poka-yoke",
+      "name": "poka-yoke",
+      "description": "Mistake-proof code, config and process: make the wrong action impossible or self-announcing rather than documented.",
+      "category": "development",
+      "risk": "safe",
+      "source": "rainmanjam/poka-yoke",
+      "source_type": "community",
+      "source_repo": "rainmanjam/poka-yoke",
+      "license": "MIT",
+      "license_source": "https://github.com/rainmanjam/poka-yoke/blob/v0.1.2/LICENSE",
+      "tags": [
+        "mistake-proofing",
+        "code-review",
+        "api-design",
+        "guardrails",
+        "reliability"
+      ],
+      "triggers": [
+        "mistake-proofing",
+        "code-review",
+        "api-design",
+        "guardrails",
+        "reliability",
+        "poka",
+        "yoke",
+        "mistake",
+        "proof",
+        "code",
+        "config",
+        "process"
+      ],
+      "path": "skills/poka-yoke/SKILL.md"
     },
     {
       "id": "polars",
@@ -49668,6 +49738,41 @@
         "change"
       ],
       "path": "skills/spec-driven-development/SKILL.md"
+    },
+    {
+      "id": "spec-driven-loop",
+      "canonical_id": "spec-driven-loop",
+      "name": "spec-driven-loop",
+      "description": "Freeze PRD, technical design, and acceptance criteria before medium-to-large Codex work; coordinate agents with explicit ownership, then judge delivery from diffs, tests, and evidence.",
+      "category": "development",
+      "risk": "safe",
+      "source": "self",
+      "source_type": "self",
+      "source_repo": "Linji-x/spec-driven-loop",
+      "license": "MIT",
+      "license_source": "https://github.com/Linji-x/spec-driven-loop/blob/v1.0.0/LICENSE",
+      "tags": [
+        "codex",
+        "spec-driven-development",
+        "multi-agent",
+        "agent-orchestration",
+        "acceptance-testing"
+      ],
+      "triggers": [
+        "codex",
+        "spec-driven-development",
+        "multi-agent",
+        "agent-orchestration",
+        "acceptance-testing",
+        "spec",
+        "driven",
+        "loop",
+        "freeze",
+        "prd",
+        "technical",
+        "acceptance"
+      ],
+      "path": "skills/spec-driven-loop/SKILL.md"
     },
     {
       "id": "spec-to-code-compliance",

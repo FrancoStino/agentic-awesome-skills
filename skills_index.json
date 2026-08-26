@@ -3050,6 +3050,39 @@
     }
   },
   {
+    "id": "api-rate-limit-handler",
+    "path": "skills/api-rate-limit-handler",
+    "category": "development",
+    "name": "api-rate-limit-handler",
+    "description": "Implement bounded, idempotency-aware API throttling, backoff, and retry handling for 429 and transient 5xx responses.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": "2026-08-26",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    },
+    "source_type": "self",
+    "license": "MIT",
+    "tags": [
+      "rate-limiting",
+      "retry",
+      "backoff",
+      "api",
+      "resilience",
+      "throttle",
+      "429"
+    ]
+  },
+  {
     "id": "api-sdk-generator",
     "path": "skills/api-sdk-generator",
     "category": "backend",
@@ -27535,7 +27568,7 @@
     "source_type": "community",
     "source_repo": "TheaDust/lore",
     "license": "MIT",
-    "license_source": "https://github.com/TheaDust/lore/blob/main/LICENSE",
+    "license_source": "https://github.com/TheaDust/lore/blob/25111dead1b54053d65124e43c35d307951c1844/LICENSE",
     "tags": [
       "memory",
       "knowledge-base",
@@ -34240,6 +34273,39 @@
       },
       "reasons": []
     }
+  },
+  {
+    "id": "poka-yoke",
+    "path": "skills/poka-yoke",
+    "category": "development",
+    "name": "poka-yoke",
+    "description": "Mistake-proof code, config and process: make the wrong action impossible or self-announcing rather than documented.",
+    "risk": "safe",
+    "source": "rainmanjam/poka-yoke",
+    "date_added": "2026-08-25",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    },
+    "source_type": "community",
+    "source_repo": "rainmanjam/poka-yoke",
+    "license": "MIT",
+    "license_source": "https://github.com/rainmanjam/poka-yoke/blob/v0.1.2/LICENSE",
+    "tags": [
+      "mistake-proofing",
+      "code-review",
+      "api-design",
+      "guardrails",
+      "reliability"
+    ]
   },
   {
     "id": "polars",
@@ -41780,6 +41846,39 @@
     "source_repo": "addyosmani/agent-skills",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+  },
+  {
+    "id": "spec-driven-loop",
+    "path": "skills/spec-driven-loop",
+    "category": "development",
+    "name": "spec-driven-loop",
+    "description": "Freeze PRD, technical design, and acceptance criteria before medium-to-large Codex work; coordinate agents with explicit ownership, then judge delivery from diffs, tests, and evidence.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": "2026-08-25",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    },
+    "source_type": "self",
+    "source_repo": "Linji-x/spec-driven-loop",
+    "license": "MIT",
+    "license_source": "https://github.com/Linji-x/spec-driven-loop/blob/v1.0.0/LICENSE",
+    "tags": [
+      "codex",
+      "spec-driven-development",
+      "multi-agent",
+      "agent-orchestration",
+      "acceptance-testing"
+    ]
   },
   {
     "id": "spec-to-code-compliance",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T05:22:46.000Z",
+  "generatedAt": "2026-08-25T17:54:41.000Z",
   "bundles": {
     "core-dev": {
       "description": "Core development skills across languages, frameworks, and backend/frontend fundamentals.",
@@ -32,6 +32,7 @@
         "api-integration",
         "api-onboarding",
         "api-patterns",
+        "api-rate-limit-handler",
         "api-sdk-generator",
         "api-security-best-practices",
         "api-security-testing",
@@ -1238,6 +1239,7 @@
         "pi-web-search",
         "pipedrive-automation",
         "plotly",
+        "poka-yoke",
         "postgresql-optimization",
         "posthog-automation",
         "postman-newman-automation",
