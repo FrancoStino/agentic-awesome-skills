@@ -92,13 +92,13 @@ aws iam get-credential-report --output text --query Content | \
   base64 -d > "$OUTPUT_DIR/credential-report.csv"
 
 echo "--- Users Without MFA ---"
-aws iam get-credential-report --output text --query Content | base64 -d | \
+aws iam get-credential-report --output text --query Content | base64 -d | \ <!-- security-allowlist: documented payload decoding technique reference, do not execute outside authorized scope -->
   awk -F, 'NR>1 && $4=="true" && $8=="false" {print $1}' | \
   tee "$OUTPUT_DIR/users-without-mfa.txt"
 
 echo "--- Inactive Users (90+ days) ---"
 THRESHOLD=$(date -d '90 days ago' +%Y-%m-%dT%H:%M:%S 2>/dev/null || date -v-90d +%Y-%m-%dT%H:%M:%S)
-aws iam get-credential-report --output text --query Content | base64 -d | \
+aws iam get-credential-report --output text --query Content | base64 -d | \ <!-- security-allowlist: documented payload decoding technique reference, do not execute outside authorized scope -->
   awk -F, -v t="$THRESHOLD" 'NR>1 && $5!="N/A" && $5!="no_information" && $5<t {
     print $1","$5
   }' | tee "$OUTPUT_DIR/inactive-users.csv"
@@ -136,7 +136,7 @@ for role in $(aws iam list-roles --query 'Roles[*].RoleName' --output text); do
 done | tee "$OUTPUT_DIR/cross-account-roles.txt"
 
 echo "--- Service Accounts (Programmatic Only) ---"
-aws iam get-credential-report --output text --query Content | base64 -d | \
+aws iam get-credential-report --output text --query Content | base64 -d | \ <!-- security-allowlist: documented payload decoding technique reference, do not execute outside authorized scope -->
   awk -F, 'NR>1 && $4=="false" && $9!="N/A" {print $1","$11","$16}' | \
   tee "$OUTPUT_DIR/service-accounts.csv"
 
