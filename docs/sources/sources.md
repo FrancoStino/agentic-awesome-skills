@@ -181,6 +181,17 @@ The following 7 skills were adapted from [yylo-skills](https://github.com/yylo-d
 | :---- | :-------------- | :------ | :---- |
 | `ledger-tasks-yylo`, `plan-ledger-tasks-yylo`, `ralph-loop-yylo`, `understand-project-yylo`, `wiki-yylo`, `workflow-yylo`, `artifact-yylo` | [yylo-dev/yylo-skills](https://github.com/yylo-dev/yylo-skills) | MIT | Kanban ledger lifecycle, PDR planning, Ralph single-task execution loop, project understanding, wiki/workflow/artifact records; adapted with upstream frontmatter, When to Use/Limitations, and fail-closed safety boundaries. |
 
+## Skills from elementalsouls/Claude-BugHunter — issue126-bughunter
+
+The following 83 skills were adapted from [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) (MIT) for [FrancoStino/opencode-skills-collection#126](https://github.com/FrancoStino/opencode-skills-collection/issues/126) — bug-bounty and external red-team workflows across 24 vulnerability classes plus identity/infrastructure attack matrices. Docs-only import: helper scripts, slash commands, engine, and research assets are intentionally not bundled.
+
+| Skill | Original Source | License | Notes |
+| :---- | :-------------- | :------ | :---- |
+| 79 offensive skills (`apk-redteam-pipeline`, `bb-local-toolkit`, `bug-bounty`, `cloud-iam-deep`, `enterprise-vpn-attack`, all `hunt-*`, `ios-redteam-pipeline`, `m365-entra-attack`, `meme-coin-audit`, `offensive-osint`, `okta-attack`, `osint-methodology`, `security-arsenal`, `supply-chain-attack-recon`, `vmware-vcenter-attack`, `web2-recon`, `web3-audit`, …) | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | MIT | Active recon/exploitation techniques, each with `AUTHORIZED USE ONLY` disclaimer + mandatory confirmation gate. |
+| 5 process skills (`report-writing`, `redteam-report-template`, `bugcrowd-reporting`, `evidence-hygiene`, `mid-engagement-ir-detection` — reporting, evidence handling, detection notes) | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | MIT | Process guidance, no active probing; `risk: safe`. |
+
+Oversized entrypoints (`osint-methodology`, `bug-bounty`, `bb-local-toolkit`, `security-arsenal`, `supply-chain-attack-recon`, `web2-recon`, `web3-audit`, `triage-validation`, …) were modularized with detail sections under `references/` to stay within the 500-line audit budget.
+
 ## License Policy
 
 - **Code**: All original code in this repository is **MIT**.
