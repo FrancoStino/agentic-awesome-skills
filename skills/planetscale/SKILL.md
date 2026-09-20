@@ -295,11 +295,3 @@ mysql -h 127.0.0.1 -u myapp -psecret my-app
 - Infrastructure commands can disrupt services: confirm target host/scope and have backups/snapshots before mutating state.
 - Docs-only import: upstream scripts and templates not bundled.
 
-### Example
-
-```bash
-ssh -G target-host | grep -i hostname
-systemctl status example || true
-```
-
-> Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.

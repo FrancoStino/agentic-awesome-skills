@@ -17,6 +17,11 @@ metadata:
   version: '1.0'
 ---
 
+## When to Use
+
+- Provisioning, hardening, or operating the infrastructure described in this skill within an authorized environment.
+
+
 # Terraform AWS
 
 Provision and manage AWS infrastructure with Terraform.
@@ -118,11 +123,3 @@ terraform destroy
 - Infrastructure commands can disrupt services: confirm target host/scope and have backups/snapshots before mutating state.
 - Docs-only import: upstream scripts and templates not bundled.
 
-### Example
-
-```bash
-ssh -G target-host | grep -i hostname
-systemctl status example || true
-```
-
-> Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.
