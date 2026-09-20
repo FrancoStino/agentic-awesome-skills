@@ -419,37 +419,20 @@ testing_strategy:
 ```
 
 
-## Contents
-
-- [Versioning Strategy](references/details.md)
-- [Runbook Index Template](references/details.md)
-- [Best Practices](references/details.md)
-
-## Example Runbook — Database Failover
-
-````markdown
-# Runbook: PostgreSQL Database Failover
-
-**Owner:** Platform / DBA team
-**Last Reviewed:** 2025-06-15
-**Version:** 2.1
-**Severity if unavailable:** SEV1
-
----
 
 ## When to Use
 
-- You need governance, framework (SOC2/ISO/PCI/HIPAA/GDPR/FedRAMP), continuity, or audit-evidence guidance for this topic.
+- Creating or updating operational runbooks, SOPs, on-call procedures, or incident recovery guides.
 
 ## Limitations
 
-- Guidance and checklists only; not legal advice and not a substitute for a qualified auditor.
-- Docs-only import: upstream templates and scripts not bundled.
+- Runbooks must be validated in staging; examples use placeholder hostnames and account IDs.
+- Docs-only import: upstream template files are not bundled.
 
 ### Example
 
 ```markdown
-Map this skill's control checklist to our current evidence and list gaps.
+Draft a SEV2 database failover runbook with prerequisites, verification, and rollback.
 ```
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.
