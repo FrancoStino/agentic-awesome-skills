@@ -181,6 +181,10 @@ The following 7 skills were adapted from [yylo-skills](https://github.com/yylo-d
 | :---- | :-------------- | :------ | :---- |
 | `ledger-tasks-yylo`, `plan-ledger-tasks-yylo`, `ralph-loop-yylo`, `understand-project-yylo`, `wiki-yylo`, `workflow-yylo`, `artifact-yylo` | [yylo-dev/yylo-skills](https://github.com/yylo-dev/yylo-skills) | MIT | Kanban ledger lifecycle, PDR planning, Ralph single-task execution loop, project understanding, wiki/workflow/artifact records; adapted with upstream frontmatter, When to Use/Limitations, and fail-closed safety boundaries. |
 
+## Skills from BagelHole/DevOps-Security-Agent-Skills: compliance (19) — issue126-devsec-compliance
+
+Compliance batch of [FrancoStino/opencode-skills-collection#126](https://github.com/FrancoStino/opencode-skills-collection/issues/126) from [DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT): governance, frameworks (SOC2/ISO27001/PCI-DSS/HIPAA/GDPR/FedRAMP), continuity, and auditing guidance. All `risk: safe`. Docs-only import: helper scripts and templates not bundled.
+
 ## License Policy
 
 - **Code**: All original code in this repository is **MIT**.
