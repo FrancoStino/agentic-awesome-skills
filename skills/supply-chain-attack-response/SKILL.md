@@ -426,7 +426,7 @@ Invoke this skill when any of the following apply:
 
 ## Limitations
 
-- Active assessment steps need an authorized scope and the confirmation gate below where marked offensive.
+- Apply guidance only within authorized scope; test destructive steps in non-production first.
 - Docs-only import: upstream scripts and templates not bundled.
 
 ### Example

@@ -275,7 +275,7 @@ SCANNER_EXIT=$?
 if [ $GIT_SECRETS_EXIT -ne 0 ] || [ $SCANNER_EXIT -ne 0 ]; then
   echo ""
   echo "COMMIT BLOCKED: Secrets detected in staged files."
-  echo "If this is a false positive, use: git commit --no-verify"
+  echo "If this is a false positive, use: git commit"
   exit 1
 fi
 ```
@@ -429,7 +429,7 @@ Signs you need tighter guardrails:
 
 ## Limitations
 
-- Active assessment steps need an authorized scope and the confirmation gate below where marked offensive.
+- Apply guidance only within authorized scope; test destructive steps in non-production first.
 - Docs-only import: upstream scripts and templates not bundled.
 
 ### Example
