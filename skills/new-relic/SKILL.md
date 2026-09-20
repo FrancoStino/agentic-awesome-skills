@@ -43,7 +43,7 @@ Use this skill when:
 
 ```bash
 # Add repository and install
-curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash <!-- security-allowlist: curl-pipe-bash -->
 
 # Configure license key
 sudo NEW_RELIC_API_KEY=<YOUR_API_KEY> NEW_RELIC_ACCOUNT_ID=<ACCOUNT_ID> /usr/local/bin/newrelic install
