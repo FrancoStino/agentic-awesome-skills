@@ -181,6 +181,10 @@ The following 7 skills were adapted from [yylo-skills](https://github.com/yylo-d
 | :---- | :-------------- | :------ | :---- |
 | `ledger-tasks-yylo`, `plan-ledger-tasks-yylo`, `ralph-loop-yylo`, `understand-project-yylo`, `wiki-yylo`, `workflow-yylo`, `artifact-yylo` | [yylo-dev/yylo-skills](https://github.com/yylo-dev/yylo-skills) | MIT | Kanban ledger lifecycle, PDR planning, Ralph single-task execution loop, project understanding, wiki/workflow/artifact records; adapted with upstream frontmatter, When to Use/Limitations, and fail-closed safety boundaries. |
 
+## Skills from BagelHole/DevOps-Security-Agent-Skills: infrastructure (70) — issue126-devsec-infrastructure
+
+Infrastructure batch of [FrancoStino/opencode-skills-collection#126](https://github.com/FrancoStino/opencode-skills-collection/issues/126) from [DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT): servers, storage, databases (incl. `postgresql-devsec`, renamed — `postgresql` already exists in the catalog), networking, cloud (AWS/Azure/GCP), and local-AI infrastructure. All `risk: critical` (guidance mutates infrastructure state). Docs-only import: helper scripts and templates not bundled. `azure-functions` renamed to `azure-functions-devsec` (`azure-functions` already exists in the catalog).
+
 ## License Policy
 
 - **Code**: All original code in this repository is **MIT**.
