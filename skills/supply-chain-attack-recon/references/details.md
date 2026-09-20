@@ -117,13 +117,13 @@ Twelve well-documented public cases, mapped to the recon surface above. Each ent
 
 - **Flow:** Attackers gained access to Codecov's Docker image build process via a credential mistake in the image-creation flow, then modified the `Bash Uploader` script (`https://codecov.io/bash`) to exfiltrate environment variables to a third-party IP. The modification persisted from 31 Jan 2021 to 1 Apr 2021 — two months before detection by a customer who noticed an SHA-256 mismatch.
 - **Root cause:** Docker image build leaked a credential allowing modification of the served bash script; no integrity verification (no signed pinned hash) on the customer side.
-- **Impact:** Every CI run worldwide that piped `curl -s https://codecov.io/bash | bash` for 2 months exfiltrated env vars. Confirmed downstream victims: HashiCorp (rotated GPG key), Twilio, Rapid7 (source-code partial exposure), Mercari, Confluent, Atlassian. <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+- **Impact:** Every CI run worldwide that piped `curl -s https://codecov.io/bash | bash` for 2 months exfiltrated env vars. Confirmed downstream victims: HashiCorp (rotated GPG key), Twilio, Rapid7 (source-code partial exposure), Mercari, Confluent, Atlassian. <!-- security-allowlist: curl-pipe-bash -->
 - **References:**
   - Codecov post-mortem: https://about.codecov.io/security-update/
   - HashiCorp advisory: https://discuss.hashicorp.com/t/hcsec-2021-12-codecov-security-event-and-hashicorp-gpg-key-exposure/23512
   - Mercari disclosure: https://about.mercari.com/en/press/news/articles/20210521_incidentreport/
   - Rapid7: https://www.rapid7.com/blog/post/2021/05/13/rapid7-discloses-its-response-to-codecov-incident/
-- **Recon takeaway:** "Curl-bash-install" patterns in public CI workflows are gold for this recon skill — search `.github/workflows/` for `curl ... | bash`, `wget ... | sh`, `iwr ... | iex`. Any third-party URL fed into a shell is a supply-chain blast radius. Pinned SHAs in workflows mitigate; absence of pinning = finding. <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+- **Recon takeaway:** "Curl-bash-install" patterns in public CI workflows are gold for this recon skill — search `.github/workflows/` for `curl ... | bash`, `wget ... | sh`, `iwr ... | iex`. Any third-party URL fed into a shell is a supply-chain blast radius. Pinned SHAs in workflows mitigate; absence of pinning = finding. <!-- security-allowlist: curl-pipe-bash, wget-pipe-sh, irm-pipe-iex -->
 
 ### 5. ua-parser-js npm hijack (Oct 2021)
 
@@ -240,7 +240,7 @@ Twelve well-documented public cases, mapped to the recon surface above. Each ent
 ### Patterns across all 12 cases
 
 - **Code-signing does NOT save you** — SolarWinds, 3CX, ua-parser-js all shipped legitimately-signed malicious code.
-- **Pinning to mutable references is the recurring failure** — `curl | bash` (Codecov), `@v35` action tags (tj-actions), `^1.0.0` semver (Birsan, event-stream). <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+- **Pinning to mutable references is the recurring failure** — `curl | bash` (Codecov), `@v35` action tags (tj-actions), `^1.0.0` semver (Birsan, event-stream). <!-- security-allowlist: curl-pipe-bash -->
 - **Maintainer-account compromise > technical CVE** for npm/PyPI ecosystem — 6 of 12 cases.
 - **Cascading supply chain is now normal** — 3CX from X_TRADER; Codecov → HashiCorp → HashiCorp's downstream users. Assume your target's vendors' vendors are in scope conceptually.
 - **CI runners are the highest-value foothold** — every case where attacker code executed on a CI runner yielded cloud / GitHub / secrets in bulk.

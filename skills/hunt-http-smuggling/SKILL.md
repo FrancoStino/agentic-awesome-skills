@@ -29,7 +29,7 @@ report_count: 12
 >
 > Without that confirmation, remain read-only and provide defensive guidance only. Prefer a sandbox, disposable VM, or controlled lab.
 
-## 17. HTTP REQUEST SMUGGLING
+##  HTTP REQUEST SMUGGLING
 > Lowest dup rate. $5K–$30K. PortSwigger research by James Kettle.
 
 ### CL.TE (Content-Length front, Transfer-Encoding back)

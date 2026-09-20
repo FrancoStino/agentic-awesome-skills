@@ -187,10 +187,8 @@ The following 83 skills were adapted from [Claude-BugHunter](https://github.com/
 
 | Skill | Original Source | License | Notes |
 | :---- | :-------------- | :------ | :---- |
-| 79 offensive skills (`apk-redteam-pipeline`, `bb-local-toolkit`, `bug-bounty`, `cloud-iam-deep`, `enterprise-vpn-attack`, all `hunt-*`, `ios-redteam-pipeline`, `m365-entra-attack`, `meme-coin-audit`, `offensive-osint`, `okta-attack`, `osint-methodology`, `security-arsenal`, `supply-chain-attack-recon`, `vmware-vcenter-attack`, `web2-recon`, `web3-audit`, …) | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | MIT | Active recon/exploitation techniques, each with `AUTHORIZED USE ONLY` disclaimer + mandatory confirmation gate. |
 | 5 process skills (`report-writing`, `redteam-report-template`, `bugcrowd-reporting`, `evidence-hygiene`, `mid-engagement-ir-detection` — reporting, evidence handling, detection notes) | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | MIT | Process guidance, no active probing; `risk: safe`. |
 
-Oversized entrypoints (`osint-methodology`, `bug-bounty`, `bb-local-toolkit`, `security-arsenal`, `supply-chain-attack-recon`, `web2-recon`, `web3-audit`, `triage-validation`, …) were modularized with detail sections under `references/` to stay within the 500-line audit budget.
 
 ## License Policy
 
