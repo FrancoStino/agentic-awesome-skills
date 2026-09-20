@@ -97,29 +97,29 @@ For each page in the crawl set, record:
 
 Delegate analysis to 5 specialized subagents. Each subagent operates on the collected page data and produces a category score (0-100) plus findings.
 
-**Subagent 1: AI Visibility Analysis (geo-ai-visibility)**
+**Subagent 1: AI Visibility Analysis** (invoke skill `geo-citability`)
 - Analyze content blocks for quotability by AI systems (citability scoring)
 - Check AI crawler access via robots.txt and llms.txt presence
 - Scan brand presence across YouTube, Reddit, Wikipedia, LinkedIn
 - Score brand authority signals that AI models use for entity recognition
 
-**Subagent 2: Platform Optimization (geo-platform-analysis)**
+**Subagent 2: Platform Optimization** (invoke skill `geo-platform-optimizer`)
 - Assess readiness for Google AI Overviews, ChatGPT, Perplexity, Gemini, Bing Copilot
 - Check platform-specific ranking factors and optimization opportunities
 
-**Subagent 3: Technical GEO Infrastructure (geo-technical)**
+**Subagent 3: Technical GEO Infrastructure** (invoke skill `geo-technical`)
 - Analyze robots.txt for AI crawler access
 - Verify meta tags, headers, and technical accessibility for AI systems
 - Check page speed, server-side rendering, and Core Web Vitals
 - Assess security headers and mobile optimization
 
-**Subagent 4: Content E-E-A-T Quality (geo-content)**
+**Subagent 4: Content E-E-A-T Quality** (invoke skill `geo-content`)
 - Evaluate Experience, Expertise, Authoritativeness, Trustworthiness signals
 - Check author bios, credentials, source citations
 - Assess content freshness, depth, and originality
 - Verify "About" page quality and team credentials
 
-**Subagent 5: Schema & Structured Data (geo-schema)**
+**Subagent 5: Schema & Structured Data** (invoke skill `geo-schema`)
 - Validate all schema.org markup
 - Check for GEO-critical schema types (FAQ, HowTo, Organization, Product, Article)
 - Assess schema completeness and accuracy
