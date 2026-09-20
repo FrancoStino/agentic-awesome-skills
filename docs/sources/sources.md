@@ -181,6 +181,10 @@ The following 7 skills were adapted from [yylo-skills](https://github.com/yylo-d
 | :---- | :-------------- | :------ | :---- |
 | `ledger-tasks-yylo`, `plan-ledger-tasks-yylo`, `ralph-loop-yylo`, `understand-project-yylo`, `wiki-yylo`, `workflow-yylo`, `artifact-yylo` | [yylo-dev/yylo-skills](https://github.com/yylo-dev/yylo-skills) | MIT | Kanban ledger lifecycle, PDR planning, Ralph single-task execution loop, project understanding, wiki/workflow/artifact records; adapted with upstream frontmatter, When to Use/Limitations, and fail-closed safety boundaries. |
 
+## Skills from BagelHole/DevOps-Security-Agent-Skills: security (35) — issue126-devsec-security
+
+Security batch of [FrancoStino/opencode-skills-collection#126](https://github.com/FrancoStino/opencode-skills-collection/issues/126) from [DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT): secrets management, scanning (SAST/DAST/dependency/container/SBOM/vulnerability), network defense, security operations, and AI security hardening. Risk split: `safe` for static guidance and read-only analysis, `critical` for privileged security operations, `offensive` (with `AUTHORIZED USE ONLY` + confirmation gate) for live probing (`vulnerability-scanning`, `dast-scanning`, `supply-chain-attack-response`) and `penetration-testing`. Docs-only import: helper scripts and templates not bundled.
+
 ## License Policy
 
 - **Code**: All original code in this repository is **MIT**.
