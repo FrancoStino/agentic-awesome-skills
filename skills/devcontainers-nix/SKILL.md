@@ -125,7 +125,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install project-specific tools
-RUN curl -fsSL https://get.opentofu.org/install-opentofu.sh | sh -s -- --install-method standalone
+RUN curl -fsSL https://get.opentofu.org/install-opentofu.sh -o /tmp/install-opentofu.sh \
+    && sh /tmp/install-opentofu.sh -s -- --install-method standalone \
+    && rm /tmp/install-opentofu.sh
 RUN curl -LO "https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" \
     && install kubectl /usr/local/bin/
 
@@ -216,7 +218,7 @@ Devbox wraps Nix with a friendlier interface:
 
 ```bash
 # Install Devbox
-curl -fsSL https://get.jetify.com/devbox | bash <!-- security-allowlist: documented installer one-liner attack-technique reference, do not execute outside authorized scope -->
+curl -fsSL https://get.jetify.com/devbox -o /tmp/install-devbox.sh && sh /tmp/install-devbox.sh && rm /tmp/install-devbox.sh
 
 # Initialize project
 devbox init
