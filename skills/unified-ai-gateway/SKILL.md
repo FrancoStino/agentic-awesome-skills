@@ -35,7 +35,7 @@ These are two different things and they are not equal today:
   image bytes rather than from this file.
 - **Reviewed and pinned below: `0.4.9`.** The inspection procedure in this file
   pins that image's recorded digests because `0.4.9` is the newest version with a
-  completed [content review](https://github.com/happy520ai/unified-ai-system/blob/master/docs/security/mcp-image-review-0.4.9.md).
+  completed [content review](https://github.com/happy520ai/unified-ai-system/blob/8561ec5c9e9d1ecf499c1be5aba0ba3720219074/docs/security/mcp-image-review-0.4.9.md).
   It carries 9 of the fifteen names: the model-backed enhancement, knowledge
   retrieval and workflow execution tools arrived at 0.5.0, and the three
   governance tools at 0.8.0.
@@ -104,7 +104,7 @@ deletion is another filesystem change and requires approval for the exact path.
 
 5. Read every generated inventory and report the inspection before proceeding.
    Compare it with the versioned
-   [image content review](https://github.com/happy520ai/unified-ai-system/blob/master/docs/security/mcp-image-review-0.4.9.md).
+   [image content review](https://github.com/happy520ai/unified-ai-system/blob/8561ec5c9e9d1ecf499c1be5aba0ba3720219074/docs/security/mcp-image-review-0.4.9.md).
    Require OCI index digest
    `sha256:751a0d32acd2d6b1da6ad9ac67987fbd1ff36ce26b7160014d8605f18b7907b3`.
    For linux/amd64, require manifest digest
@@ -284,4 +284,4 @@ Agent:
 - [Unified AI System](https://github.com/happy520ai/unified-ai-system)
 - [60-second Codex MCP quickstart](https://github.com/happy520ai/unified-ai-system/blob/master/docs/codex-mcp-quickstart.md)
 - [MCP server guide](https://github.com/happy520ai/unified-ai-system/blob/master/packages/mcp-server/README.md)
-- [MCP image content review](https://github.com/happy520ai/unified-ai-system/blob/master/docs/security/mcp-image-review-0.4.9.md)
+- [MCP image content review](https://github.com/happy520ai/unified-ai-system/blob/8561ec5c9e9d1ecf499c1be5aba0ba3720219074/docs/security/mcp-image-review-0.4.9.md)
